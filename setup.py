@@ -16,8 +16,7 @@ setup(
         'geoip_data',
     ],
     package_data={'geoip_data': [
-		'geoip_data/static/geoip_data/*.csv'
-		'geoip_data/static/geoip_data/*.dat'
+		'data/*.dat'
 	]},
     # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
