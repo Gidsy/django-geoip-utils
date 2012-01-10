@@ -20,11 +20,13 @@ This product includes GeoLite data created by MaxMind, available from http://max
 Configuration
 ===============
 
-**GEOIP_REQUEST_IP_RESOLVER** 
+**GEOIP_REQUEST_IP_RESOLVER**
+
 **Default:** geoip_data.core.remote_addr_ip
 The function used for getting the IP of the client from the request.
 
 **Options:**
+
 * geoip_data.utils.remote_addr_ip 
   uses the REMOTE_ADDR of the request. Good for development and standard setup
 * geoip_data.utils.x_forwarded_ip
