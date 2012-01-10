@@ -1,0 +1,1 @@
+include README.rst LICENSE geoip_data/static/geoip_data/*.csv geoip_data/static/geoip_data/*.dat
