@@ -5,7 +5,7 @@ import sys
 from distutils.core import setup
 
 setup(
-    name='geoip_data',
+    name='django-geoip-data',
     version='0.0.1',
     description='GeoIp data as an app to facilitate installing. Also features management commands for updating the data.',
     long_description=open('README.rst').read(),
@@ -18,10 +18,8 @@ setup(
     package_data={'geoip_data': [
 		'data/*.dat'
 	]},
-    # data_files=[('certifi', ['certifi/cacert.pem'])],
-    include_package_data=True,
     classifiers=(
-        'Development Status :: 4 - Production/Beta',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'Programming Language :: Python',
