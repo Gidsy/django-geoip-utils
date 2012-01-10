@@ -21,7 +21,6 @@ setup(
 	]},
     # data_files=[('certifi', ['certifi/cacert.pem'])],
     include_package_data=True,
-    license='MIT',
     classifiers=(
         'Development Status :: 4 - Production/Beta',
         'Intended Audience :: Developers',
