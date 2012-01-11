@@ -1,5 +1,7 @@
-import os
-from django.contrib.gis.utils import GeoIP
+try:
+    from django.contrib.gis.geoip import GeoIP
+except ImportError:
+    from django.contrib.gis.utils import GeoIP
 
 from .utils import get_ip_of_request
 from .settings import CACHE_METHOD
