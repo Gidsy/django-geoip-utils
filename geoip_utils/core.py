@@ -1,6 +1,10 @@
 import os
 from django.contrib.gis.utils import GeoIP
 
+from .utils import get_ip_of_request
+from .settings import CACHE_METHOD
+
+
 def get_country(request):
     ip = get_ip_of_request(request)
     if ip:
