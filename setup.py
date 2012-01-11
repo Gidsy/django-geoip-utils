@@ -6,7 +6,7 @@ from distutils.core import setup
 
 setup(
     name='django-geoip-utils',
-    version='0.0.3',
+    version='0.0.4',
     description='GeoIp data as an app to facilitate installing. Also features template filters, util functions and management commands for updating the data.',
     long_description=open('README.rst').read(),
     author='Philipp Wassibauer',
