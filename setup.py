@@ -14,11 +14,13 @@ setup(
     url='http://github.com/Gidsy/django-geoip-utils',
     packages=[
         'geoip_utils',
+        'geoip_utils.management',
+        'geoip_utils.management.commands',
         'geoip_utils.templatetags',
     ],
     package_data={'geoip_utils': [
-		'data/*.dat'
-	]},
+        'data/*.dat'
+    ]},
     classifiers=(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

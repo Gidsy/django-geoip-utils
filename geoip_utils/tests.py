@@ -6,6 +6,6 @@ class GeoIpDataTestCase(unittest.TestCase):
         request = object()
         request.META = {'REMOTE_ADDR': "1.1.1.1"}
         country = geoip_tags.country_of_request(request)
-        
+
 if __name__ == '__main__':
     unittest.main()
