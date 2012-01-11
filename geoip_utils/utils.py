@@ -10,7 +10,7 @@ def get_ip_of_request(request):
 	"""
 	try: 
 		(module, attribute) = REQUEST_IP_RESOLVER.rsplit(".", 1)
-	    ip_resolver_module = import_module(module)
+		ip_resolver_module = import_module(module)
 		ip_resolver = getattr(ip_resolver_module, attribute)
 	except ImportError: 
 		raise ImproperlyConfigured("Please specify a valid GEOIP_REQUEST_IP_RESOLVER module. "
@@ -41,11 +41,11 @@ def x_forwarded_ip(request):
 	This function assumes that your Nginx is configured with:
 	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 	"""
-    ip_address = None
-    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-        ip_address_array = request.META.get('HTTP_X_FORWARDED_FOR').split(",")
-        if ip_address_array:
-            ip_address = ip_address_array[0]
+	ip_address = None
+	if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+		ip_address_array = request.META.get('HTTP_X_FORWARDED_FOR').split(",")
+		if ip_address_array:
+			ip_address = ip_address_array[0]
     return ip_address
 
 
@@ -53,9 +53,9 @@ def real_ip(request):
 	"""
 	Behind a Wsgi (Nginx) server.
 	"""
-    ip_address = None
-    if request.META.has_key('HTTP_X_REAL_IP'):
-        ip_address = request.META.get('HTTP_X_REAL_IP')
-    return ip_address
+	ip_address = None
+	if request.META.has_key('HTTP_X_REAL_IP'):
+		ip_address = request.META.get('HTTP_X_REAL_IP')
+	return ip_address
 
 
