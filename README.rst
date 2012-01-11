@@ -17,7 +17,7 @@ In your settings write::
 This product includes GeoLite data created by MaxMind, available from http://maxmind.com/
 
 
-Configuration
+Settings
 ===============
 
 **GEOIP_REQUEST_IP_RESOLVER**
@@ -37,11 +37,47 @@ The function used for getting the IP of the client from the request.
   uses the HTTP_X_REAL_IP attribute
 
 
+
+**GEOIP_CACHE_METHOD**
+
+:Default: ``GEOIP_MEMORY_CACHE``
+
+The caching function used for retrieving the location.
+
+
+Utils
+===============
+
+There are a few server utility functions to make the handling easier::
+
+    from geoip_data import core
+    core.get_country(request)
+    core.get_city(request)
+    core.get_lat_lon(request)
+    core.get_country_code(request)
+    core.get_country_name(request)
+    
+
 Filters
 ===============
 
-You can get the ::
+There are filters for extracting the information you need in the templates.
+You need to have ``django.core.context_processors.request`` enabled in your TEMPLATE_CONTEXT_PROCESSORS::
 
-    import geoip_data
-    GEOIP_PATH = geoip_data.where()
+    {% load geoip_tags %}
+    {{ request|country_code_of_request }}
+    {{ request|city_name_of_request }}
+    {{ request|postal_code_of_request }}
+    {{ request|region_of_request }}
+    {{ request|dma_code_of_request }}
+    {{ request|area_code_of_request }}
+    {{ request|lat_of_request }}
+    {{ request|lon_of_request }}
+    
+    
+Todo
+===============
+
+* Add a management command to update the database files
+
 
