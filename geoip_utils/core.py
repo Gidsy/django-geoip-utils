@@ -4,7 +4,6 @@ from django.contrib.gis.utils import GeoIP
 from .utils import get_ip_of_request
 from .settings import CACHE_METHOD
 
-
 def get_country(request):
     ip = get_ip_of_request(request)
     if ip:
@@ -43,12 +42,3 @@ def get_country_name(request):
         g = GeoIP(cache=CACHE_METHOD)
         return g.country_name(ip)
     return None
-
-
-def where():
-    f = os.path.split(__file__)[0]
-    return os.path.abspath(os.path.join(f, 'data'))
-
-
-if __name__ == '__main__':
-    print where()

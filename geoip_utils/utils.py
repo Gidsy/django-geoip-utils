@@ -57,5 +57,3 @@ def real_ip(request):
     if request.META.has_key('HTTP_X_REAL_IP'):
         ip_address = request.META.get('HTTP_X_REAL_IP')
     return ip_address
-
-
