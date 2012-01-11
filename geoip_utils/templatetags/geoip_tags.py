@@ -33,11 +33,17 @@ def lat_lon_of_request(request):
 
 @register.filter
 def lat_of_request(request):
-    return get_lat_lon(request)["lat"]
+    coordinates = get_lat_lon(request)
+    if coordinates:
+        return coordinates[0]
+    return None
 
 @register.filter
 def lon_of_request(request):
-    return get_lat_lon(request)["lon"]
+    coordinates = get_lat_lon(request)
+    if coordinates:
+        return coordinates[1]
+    return None
 
 @register.filter
 def postal_code_of_request(request):
