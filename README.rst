@@ -22,10 +22,12 @@ Configuration
 
 **GEOIP_REQUEST_IP_RESOLVER**
 
-**Default:** geoip_data.core.remote_addr_ip
+:Default: ``geoip_data.core.remote_addr_ip``
+
 The function used for getting the IP of the client from the request.
 
-**Options:**
+
+:Options:
 
 * geoip_data.utils.remote_addr_ip 
   uses the REMOTE_ADDR of the request. Good for development and standard setup
@@ -35,4 +37,11 @@ The function used for getting the IP of the client from the request.
   uses the HTTP_X_REAL_IP attribute
 
 
+Filters
+===============
+
+You can get the ::
+
+    import geoip_data
+    GEOIP_PATH = geoip_data.where()
 
