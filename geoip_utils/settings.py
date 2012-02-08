@@ -5,4 +5,4 @@ REQUEST_IP_RESOLVER = getattr(settings, "GEOIP_REQUEST_IP_RESOLVER", "geoip_util
 CACHE_METHOD = getattr(settings, "GEOIP_CACHE_METHOD", None)
 if CACHE_METHOD is None:
     from django.contrib.gis.utils import GeoIP
-    CACHE_METHOD = GeoIP.GEOIP_MEMORY_CACHE
+    CACHE_METHOD = GeoIP.GEOIP_STANDARD
