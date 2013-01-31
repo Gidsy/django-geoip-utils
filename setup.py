@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
-import sys
 from distutils.core import setup
 
 setup(
     name='django-geoip-utils',
-    version='0.0.5',
+    version='0.0.6',
     description='GeoIp data as an app to facilitate installing. Also features template filters, util functions and management commands for updating the data.',
     long_description=open('README.rst').read(),
     author='Philipp Wassibauer',
