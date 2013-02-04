@@ -6,7 +6,8 @@ setup(
     name='django-geoip-utils',
     version='0.1',
     description='GeoIp data as an app to facilitate installing. '
-                'Also features template filters and utility functions.',
+                'Also features template filters, utility functions and '
+                'a management command for updating the GeoIP data.',
     long_description=open('README.rst').read(),
     author='Philipp Wassibauer',
     author_email='phil@gidsy.com',
