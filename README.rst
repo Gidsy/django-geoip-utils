@@ -6,7 +6,7 @@ Installation
 
 ::
 
-    pip install django-geoip-utils==0.0.2
+    pip install django-geoip-utils
 
 In your settings write::
 
