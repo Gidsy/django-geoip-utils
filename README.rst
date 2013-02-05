@@ -80,7 +80,7 @@ The caching function used for retrieving the location.
   Loads database into mmap shared memory (not available on Windows).
 
 Utilities
-=========
+---------
 
 There are a few server utility functions to make the handling easier::
 
@@ -98,7 +98,7 @@ There are a few server utility functions to make the handling easier::
     
 
 Template filters
-================
+----------------
 
 There are filters for extracting the information you need in the templates.
 You need to have ``django.core.context_processors.request`` enabled in your
@@ -114,9 +114,9 @@ TEMPLATE_CONTEXT_PROCESSORS::
     {{ request|area_code_of_request }}
     {{ request|lat_of_request }}
     {{ request|lon_of_request }}
-    
-    
-TODO
-====
 
-* Add a management command to update the database files
+Management command
+------------------
+
+You can run the ``update_geoip_data`` management command to download updated
+GeoIP data in place.
