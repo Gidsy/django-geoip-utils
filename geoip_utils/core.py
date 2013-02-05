@@ -3,10 +3,18 @@ try:
 except ImportError:
     from django.contrib.gis.utils import GeoIP
 
+from django.utils.functional import LazyObject
+
 from .utils import get_ip_of_request
 from .settings import CACHE_METHOD
 
-geoip = GeoIP(cache=CACHE_METHOD)
+
+class GeoIPHandler(LazyObject):
+
+    def _setup(self):
+        self._wrapped = GeoIP(cache=CACHE_METHOD)
+
+geoip = GeoIPHandler()
 
 
 def get_country(request):
